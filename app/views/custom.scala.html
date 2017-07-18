@@ -1,0 +1,15 @@
+@*************************************
+* Home page.                        *
+*                                   *
+* @param customer                   *
+* @param orders                     *
+*************************************@
+@(customer: Customer, orders: List[Order])
+
+<h2>Welcome from customer template: @customer.name!</h2>
+
+<ul>
+@for(order <- orders) {
+    <li>@order.title</li>
+}
+</ul>
