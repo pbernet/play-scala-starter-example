@@ -1,0 +1,9 @@
+@(myForm: Form[UserData])(implicit request: RequestHeader, messagesProvider: MessagesProvider)
+
+<h2>Example form</h2>
+
+@helper.form(action = routes.FormController.submit) {
+    @helper.inputText(myForm("name"))
+    @helper.inputPassword(myForm("age"))
+    <button type="submit" >Submit</button>
+}
