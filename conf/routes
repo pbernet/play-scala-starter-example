@@ -13,8 +13,7 @@ GET     /custom                    controllers.CustomController.custom
 # An example controller showing how to stream data to a client
 GET     /queueAction               controllers.PlayAkkaSourceQueueController.queueAction
 
-GET     /form                       controllers.FormController.showPage
-
+GET     /form                       controllers.FormController.form
 POST    /submit                     controllers.FormController.submit
 
 # Map static resources from the /public folder to the /assets URL path

@@ -1,9 +1,10 @@
 @(myForm: Form[UserData])(implicit request: RequestHeader, messagesProvider: MessagesProvider)
 
-<h2>Example form</h2>
+<h2>Example form with CSRF Protection</h2>
 
 @helper.form(action = routes.FormController.submit) {
+    @helper.CSRF.formField
     @helper.inputText(myForm("name"))
-    @helper.inputPassword(myForm("age"))
-    <button type="submit" >Submit</button>
+    @helper.inputText(myForm("age"))
+    <input type="submit"/>
 }

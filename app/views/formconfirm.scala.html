@@ -1,0 +1,15 @@
+@(user: UserData)(implicit request: RequestHeader, messagesProvider: MessagesProvider)
+
+<h2>Confirmation</h2>
+
+<textarea rows="4" cols="50" readonly="true">
+    You have submitted:
+    Name: @user.name
+    Age: @user.age
+</textarea>
+
+<p>
+    <a href="@routes.HomeController.index()">Home</a>
+</p>
+
+
